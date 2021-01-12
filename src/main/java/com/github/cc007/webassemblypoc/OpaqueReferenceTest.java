@@ -17,8 +17,8 @@ public class OpaqueReferenceTest {
                 + "</div>"
         );
         w.document().getElementById("clickable").addEventListener("click", (EventListener<ClickEvent>) aValue -> {
-            w.document().getElementById("clickable").textContent("Clicked " + clicks.getCount().toString(10) + " times!");
             clicks.increment();
+            w.document().getElementById("clickable").textContent("Clicked " + clicks.getCount().toString(10) + " times!");
         });
     }
 }
